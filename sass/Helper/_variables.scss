@@ -4,15 +4,16 @@ $color-dark-1: #191919;
 $color-dark-2: #181818;
 $color-white: #fff;
 $color-bg: #00000000;
+$color-gray: #dcd1f3;
 
 // font size:
 $fs-1: 14px;
 $fs-2: 1.1rem;
 $fs-3: 3.8rem;
-$fs-4: 0.75rem;
+$fs-4: .85rem;
 $fs-5: 1.55rem;
 $fs-6: 2.5rem;
-$fs-7: 0.9em;
+$fs-7: .9em;
 
 // font weight:
 $fw-1: 300;
@@ -23,9 +24,19 @@ $fw-4: 700;
 //Padding
 $pd-1: .8em;
 $pd-2: 1.5em;
+$pd-3: .5em;
+$pd-4: 5em;
+$pd-5: 2em;
 
 //Margin
 $mg-1: 4em;
+$mg-2: 1.5em;
+$mg-3: 1em;
+$mg-4: 8em;
+
+// line-height
+$lh-1: 1.8em;
+$lh-2: 1em;
 
 // width, height
 $w-1: 100%;
@@ -35,6 +46,8 @@ $h-2: 50%;
 
 //border
 $bd-1: 50px;
+$bd-2: 10px;
+$bd-3: 25px;
 
 //break points
 $breakpoints: (

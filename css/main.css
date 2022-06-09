@@ -98,46 +98,149 @@ header .active .nav-link::after {
   transform: scale(1);
 }
 
-.bgTop {
+.carouselAbout {
+  position: relative;
+}
+
+.carouselAbout .bgTop {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.bgTop img {
+.carouselAbout .bgTop img {
   width: 100%;
   height: auto;
 }
 
-.mainCarousel {
-  margin-top: 4em;
+.carouselAbout .mainCarousel {
+  padding: 5em 0;
 }
 
-.mainCarousel h5 {
+.carouselAbout .mainCarousel h5 {
   font-size: 1.1rem;
   font-weight: 600;
   color: #b61984;
 }
 
-.mainCarousel h1 {
+.carouselAbout .mainCarousel h1 {
   font-size: 3.8rem;
   font-weight: 700;
   color: #191919;
 }
 
-.mainCarousel img {
+.carouselAbout .mainCarousel img {
   width: 100%;
   height: auto;
 }
 
-.bgBottom {
+.carouselAbout .bgBottom {
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-.bgBottom img {
+.carouselAbout .bgBottom img {
   width: 100%;
   height: auto;
+}
+
+.portfolioAbout {
+  position: relative;
+  background: #dcd1f3;
+}
+
+.portfolioAbout .mainPortfolio {
+  position: relative;
+  z-index: 3;
+  padding-top: 2em;
+}
+
+.portfolioAbout .mainPortfolio .card__content {
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.portfolioAbout .mainPortfolio .card__content img {
+  width: 100%;
+  height: auto;
+}
+
+.portfolioAbout .mainPortfolio .card__content .card__text {
+  padding: 1.5em 0.5em;
+}
+
+.portfolioAbout .mainPortfolio .card__content .card__text h5 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #b61984;
+}
+
+.portfolioAbout .mainPortfolio .card__content .card__text h3 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #181818;
+  margin: 1em 0;
+}
+
+.portfolioAbout .mainPortfolio .card__content .card__text p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #181818;
+  line-height: 1.8em;
+}
+
+.portfolioAbout .bgBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.portfolioAbout .bgBottom img {
+  width: 100%;
+  height: auto;
+}
+
+.contactAbout {
+  margin-top: 8em;
+}
+
+.contactAbout img {
+  width: 100%;
+  height: auto;
+}
+
+.contactAbout .form__contact {
+  height: 100%;
+  background-color: white;
+  padding: 0 2em;
+  border-radius: 10px;
+  box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+}
+
+.contactAbout .form__contact h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #181818;
+}
+
+.contactAbout .form__contact input, .contactAbout .form__contact select {
+  border-radius: 50px;
+  width: 100%;
+}
+
+.contactAbout .form__contact input {
+  height: 50px;
+}
+
+.contactAbout .form__contact select {
+  height: 40px;
+}
+
+.contactAbout .form__contact textarea {
+  border-radius: 25px;
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

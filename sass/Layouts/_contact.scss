@@ -1,0 +1,31 @@
+.contactAbout{
+    margin-top: $mg-4;
+    img{
+        @include styleImg($w-1, auto);
+    }
+    .form__contact{
+        height: $h-1;
+        background-color: rgba(255, 255, 255, 1);
+        padding: 0 $pd-5;
+        border-radius: $bd-2;
+        box-shadow: 0 30px 30px -10px rgba(0, 0, 0, .2%);
+        h2{
+            @include styleText($fs-6,$fw-4,$color-dark-2);
+        }
+        input, select{
+            border-radius: $bd-1;
+            width: $w-1;
+        }
+        input{
+            height: 50px;
+        }
+        select{
+            height: 40px;
+        }
+        textarea{
+            border-radius: $bd-3;
+            width: $w-1;
+        }
+        
+    }
+}
