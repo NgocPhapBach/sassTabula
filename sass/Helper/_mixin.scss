@@ -1,0 +1,25 @@
+@mixin styleText($fs, $fw, $color){
+    font-size: $fs;
+    font-weight: $fw;
+    color: $color;
+}
+@mixin styleButton($py, $px, $color) {
+    padding: $py $px;
+    border-radius: $bd-1;
+    box-shadow: 0 0 0 3em $color inset;
+    cursor: pointer;
+}
+@mixin styleButtonHover($color) {
+    box-shadow: 0 0 0 1px $color inset;
+}
+@mixin styleLink($color) {
+    color: $color;
+}
+@mixin styleLinkHover($color) {
+    text-decoration: none;
+    color: $color;
+}
+@mixin styleImg($w,$h) {
+    width: $w;
+    height: $h;
+}

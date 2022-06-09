@@ -1,0 +1,51 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    // box-shadow: 0 0 10px 0 rgba(204, 204, 204, 50%);
+    .navbar-nav{
+        font-family: 'Montserrat', sans-serif;
+    }
+    .logoTabula{
+        width: 80px;
+        position: relative;
+    }
+    .navbar-nav{
+        align-items: center;
+    }
+    .nav-link{
+        @include styleText($fs-1,$fw-3,$color-dark-2);
+
+        &::after {
+            display: block;
+            content: "";
+            height: 8px;
+            width: 8px;
+            position: absolute;
+            bottom: -4px;
+            margin-left: 16px;
+            border-radius: $bd-1;
+            background-color: $color-violet;
+            transform: scale(0);
+            transition: all .5s;
+        }
+
+        &:hover{
+            color: $color-violet;
+            &::after{
+                transform: scale(1);
+            }
+        }
+    }
+    .active{
+        .nav-link{
+            &::after{
+                transform: scale(1);
+            };
+        }
+    }
+    
+}

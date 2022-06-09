@@ -1,0 +1,13 @@
+.btnPhone{
+    @include styleButton($pd-1, $pd-2, $color-violet);
+    a{
+        @include styleLink($color-white);
+    }
+    transition: all .5s;
+    &:hover{
+        @include styleButtonHover($color-violet);
+        a{
+            @include styleLinkHover($color-violet);
+        }
+    }
+}

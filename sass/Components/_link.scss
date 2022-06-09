@@ -1,0 +1,8 @@
+.socialHeader{
+    i{
+        @include styleLink($color-dark-2);
+        &:hover{
+            @include styleLinkHover($color-violet);
+        }
+    }
+}
