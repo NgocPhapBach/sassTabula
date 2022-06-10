@@ -1,4 +1,4 @@
-.btnPhone{
+.btn__phone{
     @include styleButton($pd-1, $pd-2, $color-violet);
     a{
         @include styleLink($color-white);
@@ -8,6 +8,37 @@
         @include styleButtonHover($color-violet);
         a{
             @include styleLinkHover($color-violet);
+        }
+    }
+}
+.btn__contact{
+    display: block;
+    max-width: 150px;
+    margin: $mg-2 0;
+    text-align: center;
+    @include styleButton($pd-1, $pd-2, $color-violet);
+    span{
+        @include styleText($fs-1,$fw-3,$color-white);
+    }
+    transition: all .5s;
+    &:hover{
+        @include styleButtonHover($color-violet);
+        span{
+            @include styleText($fs-1,$fw-3,$color-violet);
+        }
+    }
+}
+.btn__sub{
+    text-align: center;
+    @include styleButton($pd-6, $pd-2, $color-white);
+    span{
+        @include styleText($fs-1,$fw-3,$color-dark-2);
+    }
+    transition: all .5s;
+    &:hover{
+        @include styleButtonHover($color-white);
+        span{
+            @include styleText($fs-1,$fw-3,$color-white);
         }
     }
 }

@@ -1,31 +1,101 @@
-.contactAbout{
+.contactAbout {
+    position: relative;
     margin-top: $mg-4;
-    img{
+    // text-align: center;
+    img {
         @include styleImg($w-1, auto);
     }
-    .form__contact{
-        height: $h-1;
-        background-color: rgba(255, 255, 255, 1);
-        padding: 0 $pd-5;
-        border-radius: $bd-2;
-        box-shadow: 0 30px 30px -10px rgba(0, 0, 0, .2%);
-        h2{
-            @include styleText($fs-6,$fw-4,$color-dark-2);
+    i {
+        color: $color-violet;
+        position: absolute;
+    }
+    .main__contact {
+        position: relative;
+        z-index: 3;
+        .form__contact {
+            height: $h-1;
+            background-color: rgba(255, 255, 255, 1);
+            padding: 0 $pd-5;
+            border-radius: $bd-2;
+            box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2%);
+            h2 {
+                text-align: center;
+                @include styleText($fs-6, $fw-4, $color-dark-2);
+                margin-bottom: $mg-2;
+            }
+            .inp__contact,
+            .slt__contact {
+                position: relative;
+                display: block;
+                input,
+                select {
+                    display: block;
+                    width: $w-1;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    border-radius: $bd-3;
+                    padding: $pd-1 $pd-5 $pd-1 $pd-8;
+                    transition: all .5s;
+                    &:focus {
+                        outline: none;
+                        border: 1px solid rgba(0, 0, 0, 0.4);
+                    }
+                }
+            }
+            .inp__contact {
+                i {
+                    top: 14px;
+                    left: 20px;
+                }
+            }
+            .slt__contact {
+                margin: $mg-2 0;
+                .fa-graduation-cap {
+                    top: 14px;
+                    left: 18px;
+                }
+                select {
+                    cursor: pointer;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    option {
+                        &:hover {
+                            background: transparent;
+                            color: $color-violet;
+                        }
+                    }
+                }
+                .custtom_select {
+                    .fa-angle-down {
+                        top: 15px;
+                        right: 25px;
+                    }
+                }
+            }
+            .txta_contact {
+                position: relative;
+                display: block;
+                i {
+                    top: 15px;
+                    left: 20px;
+                }
+                textarea {
+                    display: block;
+                    width: $w-1;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    border-radius: $bd-3;
+                    padding: $pd-1 $pd-5 $pd-1 $pd-8;
+                    transition: all .5s;
+                    &:focus{
+                        outline: none;
+                        border: 1px solid rgba(0, 0, 0, 0.4);
+                    }
+                }
+            }
         }
-        input, select{
-            border-radius: $bd-1;
-            width: $w-1;
-        }
-        input{
-            height: 50px;
-        }
-        select{
-            height: 40px;
-        }
-        textarea{
-            border-radius: $bd-3;
-            width: $w-1;
-        }
-        
+    }
+    .bgBottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
     }
 }

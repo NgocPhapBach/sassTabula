@@ -1,0 +1,50 @@
+footer {
+    .bg__footer {
+        position: relative;
+        background-image: url(../img/footer_background.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: $pd-9 0 $pd-10;
+        color: $color-white;
+
+        .main__footer {
+            h5 {
+                @include styleText($fs-5, $fw-4, $color-white);
+                margin-bottom: $mg-2;
+            }
+            .location__footer,
+            .phone__footer,
+            .time__footer {
+                margin-bottom: $mg-5;
+                i {
+                    padding-right: $pd-1;
+                }
+            }
+            .newsletter {
+                .inp__footer {
+                    display: block;
+                    padding: $pd-5 0 $pd-1;
+                    input {
+                        display: block;
+                        background: transparent;
+                        color: $color-white;
+                        text-align: center;
+                        width: $w-1;
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        border-radius: $bd-3;
+                        padding: $pd-6;
+                        transition: all 0.5s;
+                        &::placeholder {
+                            color: $color-white;
+                        }
+                        &:focus {
+                            outline: none;
+                            border: 1px solid $color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

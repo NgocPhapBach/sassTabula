@@ -1,8 +1,31 @@
-.socialHeader{
+.social__header{
     i{
         @include styleLink($color-dark-2);
         &:hover{
             @include styleLinkHover($color-violet);
         }
+    }
+}
+.social__footer{
+    i{
+        margin-top: $mg-2;
+        padding-right: $pd-3; 
+        @include styleLink($color-white);
+        &:hover{
+            @include styleLinkHover($color-dark-2);
+        }
+    }
+}
+.menu__inner{
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding: $pd-1 0;
+    a{
+        @include styleLink($color-white);
+        &:hover{
+            @include styleLinkHover($color-gray);
+        }
+    }
+    &:first-child{
+        padding-top: 0;
     }
 }

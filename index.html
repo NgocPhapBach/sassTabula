@@ -73,13 +73,13 @@
             <li class="nav-item mx-3">
               <a class="nav-link" href="#">Elements</a>
             </li>
-            <div class="btnPhone mx-3">
+            <div class="btn__phone mx-3">
               <a href="#">
                 <i class="fa fa-phone"></i>
                 <span>(+1) 555 234-8765</span>
               </a>
             </div>
-            <div class="socialHeader">
+            <div class="social__header">
               <a class="px-1" href="#"><i class="fab fa-twitter"></i></a>
               <a class="px-1" href="#"><i class="fab fa-facebook-f"></i></a>
               <a class="px-1" href="#"><i class="fab fa-youtube"></i></a>
@@ -208,36 +208,136 @@
     </section>
     <section class="contactAbout">
       <div class="container">
-        <div class="row">
-          <div class="col-6">
-            <img class="imgContact" src="./img/conatct_inner.png" alt="" />
-          </div>
-          <div class="col-6 p-5">
-            <div class="form__contact">
-              <form action="#">
-                <h2>Find Your Course</h2>
-                <div class="row">
-                  <div class="col-6">
-                    <input type="text" placeholder="Name" />
+        <div class="main__contact">
+          <div class="row p-5">
+            <div class="col-7">
+              <img class="imgContact" src="./img/conatct_inner.png" alt="" />
+            </div>
+            <div class="col-5 px-3 py-5">
+              <div class="form__contact">
+                <form action="#">
+                  <h2>Find Your Course</h2>
+                  <div class="row">
+                    <div class="col-6">
+                      <span class="inp__contact">
+                        <i class="fa fa-user"></i>
+                        <input type="text" placeholder="Name"/>
+                      </span>
+                    </div>
+                    <div class="col-6">
+                      <span class="inp__contact">
+                        <i class="fa fa-envelope"></i>
+                        <input
+                          type="email"
+                          placeholder="E-mail"
+                          size="10"
+                        />
+                      </span>
+                    </div>
                   </div>
-                  <div class="col-6">
-                    <input type="text" placeholder="E-mail" />
-                  </div>
-                </div>
-                <select name="" id="">
-                  <option value="">English</option>
-                  <option value="">French</option>
-                  <option value="">Spanish</option>
-                  <option value="">German</option>
-                </select>
-                <textarea name="" id="" cols="30" rows="5"></textarea>
-                <button type="button" value="Send"></button>
-              </form>
+                  <span class="slt__contact">
+                    <i class="fa fa-graduation-cap"></i>
+                    <select>
+                      <option value="English">English</option>
+                      <option value="French">French</option>
+                      <option value="Spanish">Spanish</option>
+                      <option value="German">German</option>
+                    </select>
+                    <div class="custtom_select">
+                      <i class="fa fa-angle-down"></i>
+                    </div>
+                  </span>
+                  <span class="txta_contact">
+                    <i class="fa fa-comment-alt"></i>
+                    <textarea
+                      placeholder="Message"
+                      cols="30"
+                      rows="5"
+                    ></textarea>
+                  </span>
+                  <span class="btn__contact">
+                    <span>SEND</span>
+                  </span>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="bgBottom">
+        <img src="./img/accent_bottom_wave_01.png" alt="" />
+      </div>
     </section>
+    <footer>
+      <div class="bg__footer">
+        <div class="container">
+          <div class="main__footer">
+            <div class="row">
+              <div class="col-3">
+                <div class="contac_us">
+                  <h5>Contact us</h5>
+                  <div class="location__footer">
+                    <i class="fa fa-map-marker-alt"></i>
+                    <span>Franklin St, Greenpoint Ave</span>
+                  </div>
+                  <div class="phone__footer">
+                    <i class="fa fa-phone"></i>
+                    <span>+2342 5446 67</span>
+                  </div>
+                  <div class="time__footer">
+                    <i class="fa fa-clock"></i>
+                    <span>Monday - Friday: 8 AM - 5 PM</span>
+                  </div>
+                  <div class="social__footer">
+                    <a class="px-1" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="px-1" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="px-1" href="#"><i class="fab fa-youtube"></i></a>
+                    <a class="px-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="menu_footer">
+                  <h5>Quick Links</h5>
+                  <span>
+                    <ul>
+                      <li class="menu__inner"><a href="#">Home</a></li>
+                      <li class="menu__inner"><a href="#">Courses</a></li>
+                      <li class="menu__inner"><a href="#">Schedule</a></li>
+                      <li class="menu__inner"><a href="#">Blog</a></li>
+                    </ul>
+                  </span>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="menu_footer">
+                  <h5>About</h5>
+                  <span>
+                    <ul>
+                      <li class="menu__inner"><a href="#">Home</a></li>
+                      <li class="menu__inner"><a href="#">Courses</a></li>
+                      <li class="menu__inner"><a href="#">Schedule</a></li>
+                      <li class="menu__inner"><a href="#">Blog</a></li>
+                    </ul>
+                  </span>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="newsletter">
+                  <h5>Newsletter</h5>
+                  <span class="inp__footer">
+                    <input type="email" placeholder="Your email" />
+                  </span>
+                  <div class="btn__sub">
+                    <span>SUBSCRIBE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- bs4 -->
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

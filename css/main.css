@@ -15,7 +15,11 @@ h1, h2, h3, h4, h5 {
   font-family: 'Montserrat', sans-serif;
 }
 
-.btnPhone {
+ul, li {
+  list-style: none;
+}
+
+.btn__phone {
   padding: 0.8em 1.5em;
   border-radius: 50px;
   box-shadow: 0 0 0 3em #b61984 inset;
@@ -23,26 +27,108 @@ h1, h2, h3, h4, h5 {
   transition: all .5s;
 }
 
-.btnPhone a {
+.btn__phone a {
   color: #fff;
 }
 
-.btnPhone:hover {
+.btn__phone:hover {
   box-shadow: 0 0 0 1px #b61984 inset;
 }
 
-.btnPhone:hover a {
+.btn__phone:hover a {
   text-decoration: none;
   color: #b61984;
 }
 
-.socialHeader i {
+.btn__contact {
+  display: block;
+  max-width: 150px;
+  margin: 1.5em 0;
+  text-align: center;
+  padding: 0.8em 1.5em;
+  border-radius: 50px;
+  box-shadow: 0 0 0 3em #b61984 inset;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.btn__contact span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.btn__contact:hover {
+  box-shadow: 0 0 0 1px #b61984 inset;
+}
+
+.btn__contact:hover span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #b61984;
+}
+
+.btn__sub {
+  text-align: center;
+  padding: 1em 1.5em;
+  border-radius: 50px;
+  box-shadow: 0 0 0 3em #fff inset;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.btn__sub span {
+  font-size: 14px;
+  font-weight: 600;
   color: #181818;
 }
 
-.socialHeader i:hover {
+.btn__sub:hover {
+  box-shadow: 0 0 0 1px #fff inset;
+}
+
+.btn__sub:hover span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.social__header i {
+  color: #181818;
+}
+
+.social__header i:hover {
   text-decoration: none;
   color: #b61984;
+}
+
+.social__footer i {
+  margin-top: 1.5em;
+  padding-right: 0.5em;
+  color: #fff;
+}
+
+.social__footer i:hover {
+  text-decoration: none;
+  color: #181818;
+}
+
+.menu__inner {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.8em 0;
+}
+
+.menu__inner a {
+  color: #fff;
+}
+
+.menu__inner a:hover {
+  text-decoration: none;
+  color: #dcd1f3;
+}
+
+.menu__inner:first-child {
+  padding-top: 0;
 }
 
 header {
@@ -204,6 +290,7 @@ header .active .nav-link::after {
 }
 
 .contactAbout {
+  position: relative;
   margin-top: 8em;
 }
 
@@ -212,7 +299,17 @@ header .active .nav-link::after {
   height: auto;
 }
 
-.contactAbout .form__contact {
+.contactAbout i {
+  color: #b61984;
+  position: absolute;
+}
+
+.contactAbout .main__contact {
+  position: relative;
+  z-index: 3;
+}
+
+.contactAbout .main__contact .form__contact {
   height: 100%;
   background-color: white;
   padding: 0 2em;
@@ -220,27 +317,152 @@ header .active .nav-link::after {
   box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
 }
 
-.contactAbout .form__contact h2 {
+.contactAbout .main__contact .form__contact h2 {
+  text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
   color: #181818;
+  margin-bottom: 1.5em;
 }
 
-.contactAbout .form__contact input, .contactAbout .form__contact select {
-  border-radius: 50px;
+.contactAbout .main__contact .form__contact .inp__contact,
+.contactAbout .main__contact .form__contact .slt__contact {
+  position: relative;
+  display: block;
+}
+
+.contactAbout .main__contact .form__contact .inp__contact input,
+.contactAbout .main__contact .form__contact .inp__contact select,
+.contactAbout .main__contact .form__contact .slt__contact input,
+.contactAbout .main__contact .form__contact .slt__contact select {
+  display: block;
   width: 100%;
-}
-
-.contactAbout .form__contact input {
-  height: 50px;
-}
-
-.contactAbout .form__contact select {
-  height: 40px;
-}
-
-.contactAbout .form__contact textarea {
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 25px;
+  padding: 0.8em 2em 0.8em 3em;
+  transition: all .5s;
+}
+
+.contactAbout .main__contact .form__contact .inp__contact input:focus,
+.contactAbout .main__contact .form__contact .inp__contact select:focus,
+.contactAbout .main__contact .form__contact .slt__contact input:focus,
+.contactAbout .main__contact .form__contact .slt__contact select:focus {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.contactAbout .main__contact .form__contact .inp__contact i {
+  top: 14px;
+  left: 20px;
+}
+
+.contactAbout .main__contact .form__contact .slt__contact {
+  margin: 1.5em 0;
+}
+
+.contactAbout .main__contact .form__contact .slt__contact .fa-graduation-cap {
+  top: 14px;
+  left: 18px;
+}
+
+.contactAbout .main__contact .form__contact .slt__contact select {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.contactAbout .main__contact .form__contact .slt__contact select option:hover {
+  background: transparent;
+  color: #b61984;
+}
+
+.contactAbout .main__contact .form__contact .slt__contact .custtom_select .fa-angle-down {
+  top: 15px;
+  right: 25px;
+}
+
+.contactAbout .main__contact .form__contact .txta_contact {
+  position: relative;
+  display: block;
+}
+
+.contactAbout .main__contact .form__contact .txta_contact i {
+  top: 15px;
+  left: 20px;
+}
+
+.contactAbout .main__contact .form__contact .txta_contact textarea {
+  display: block;
   width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  padding: 0.8em 2em 0.8em 3em;
+  transition: all .5s;
+}
+
+.contactAbout .main__contact .form__contact .txta_contact textarea:focus {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.contactAbout .bgBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+footer .bg__footer {
+  position: relative;
+  background-image: url(../img/footer_background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 8em 0 12.6em;
+  color: #fff;
+}
+
+footer .bg__footer .main__footer h5 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5em;
+}
+
+footer .bg__footer .main__footer .location__footer,
+footer .bg__footer .main__footer .phone__footer,
+footer .bg__footer .main__footer .time__footer {
+  margin-bottom: 0.5em;
+}
+
+footer .bg__footer .main__footer .location__footer i,
+footer .bg__footer .main__footer .phone__footer i,
+footer .bg__footer .main__footer .time__footer i {
+  padding-right: 0.8em;
+}
+
+footer .bg__footer .main__footer .newsletter .inp__footer {
+  display: block;
+  padding: 2em 0 0.8em;
+}
+
+footer .bg__footer .main__footer .newsletter .inp__footer input {
+  display: block;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 1em;
+  transition: all 0.5s;
+}
+
+footer .bg__footer .main__footer .newsletter .inp__footer input::placeholder {
+  color: #fff;
+}
+
+footer .bg__footer .main__footer .newsletter .inp__footer input:focus {
+  outline: none;
+  border: 1px solid #fff;
 }
 /*# sourceMappingURL=main.css.map */
