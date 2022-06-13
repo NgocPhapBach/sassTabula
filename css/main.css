@@ -132,7 +132,7 @@ ul, li {
 }
 
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -184,6 +184,26 @@ header .active .nav-link::after {
   transform: scale(1);
 }
 
+@media screen and (max-width: 992px) {
+  header .navbar-toggler {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    font-size: 1.55rem;
+    color: #191919;
+  }
+  header .navbar-collapse {
+    background-color: #fff;
+  }
+  header .btn__logo {
+    margin-left: 1.5em;
+  }
+  header .nav-link::after {
+    width: 0;
+    height: 0;
+  }
+}
+
 .carouselAbout {
   position: relative;
 }
@@ -195,7 +215,7 @@ header .active .nav-link::after {
 }
 
 .carouselAbout .bgTop img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -216,8 +236,12 @@ header .active .nav-link::after {
 }
 
 .carouselAbout .mainCarousel img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
+}
+
+.carouselAbout .mainCarousel .left__carousel {
+  animation-delay: .5s;
 }
 
 .carouselAbout .bgBottom {
@@ -227,7 +251,7 @@ header .active .nav-link::after {
 }
 
 .carouselAbout .bgBottom img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -243,15 +267,27 @@ header .active .nav-link::after {
 }
 
 .portfolioAbout .mainPortfolio .card__content {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background: #fff;
   border-radius: 10px;
   text-align: center;
+  transition: all 0.5s;
+  overflow: hidden;
 }
 
-.portfolioAbout .mainPortfolio .card__content img {
-  width: 100%;
+.portfolioAbout .mainPortfolio .card__content .card__img {
+  margin: 0 -1em;
+  overflow: hidden;
+}
+
+.portfolioAbout .mainPortfolio .card__content .card__img img {
+  max-width: 100%;
   height: auto;
+  transition: transform 650ms ease-in-out, filter 650ms ease-in-out;
+}
+
+.portfolioAbout .mainPortfolio .card__content .card__img img:hover {
+  transform: scale3d(1.05, 1.05, 1.05);
 }
 
 .portfolioAbout .mainPortfolio .card__content .card__text {
@@ -278,6 +314,26 @@ header .active .nav-link::after {
   line-height: 1.8em;
 }
 
+.portfolioAbout .mainPortfolio .card__content:hover {
+  box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+}
+
+.portfolioAbout .mainPortfolio .portfolio__inner:nth-child(1) .card__content, .portfolioAbout .mainPortfolio .portfolio__inner:nth-child(5) .card__content {
+  animation-delay: 200ms;
+}
+
+.portfolioAbout .mainPortfolio .portfolio__inner:nth-child(2) .card__content, .portfolioAbout .mainPortfolio .portfolio__inner:nth-child(6) .card__content {
+  animation-delay: 400ms;
+}
+
+.portfolioAbout .mainPortfolio .portfolio__inner:nth-child(3) .card__content, .portfolioAbout .mainPortfolio .portfolio__inner:nth-child(7) .card__content {
+  animation-delay: 600ms;
+}
+
+.portfolioAbout .mainPortfolio .portfolio__inner:nth-child(4) .card__content, .portfolioAbout .mainPortfolio .portfolio__inner:nth-child(8) .card__content {
+  animation-delay: 800ms;
+}
+
 .portfolioAbout .bgBottom {
   position: absolute;
   bottom: 0;
@@ -285,7 +341,7 @@ header .active .nav-link::after {
 }
 
 .portfolioAbout .bgBottom img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -295,7 +351,7 @@ header .active .nav-link::after {
 }
 
 .contactAbout img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -336,11 +392,10 @@ header .active .nav-link::after {
 .contactAbout .main__contact .form__contact .slt__contact input,
 .contactAbout .main__contact .form__contact .slt__contact select {
   display: block;
-  width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 25px;
   padding: 0.8em 2em 0.8em 3em;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .contactAbout .main__contact .form__contact .inp__contact input:focus,
@@ -349,6 +404,10 @@ header .active .nav-link::after {
 .contactAbout .main__contact .form__contact .slt__contact select:focus {
   outline: none;
   border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.contactAbout .main__contact .form__contact .inp__contact input {
+  max-width: 100%;
 }
 
 .contactAbout .main__contact .form__contact .inp__contact i {
@@ -366,6 +425,7 @@ header .active .nav-link::after {
 }
 
 .contactAbout .main__contact .form__contact .slt__contact select {
+  width: 100%;
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -397,12 +457,16 @@ header .active .nav-link::after {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 25px;
   padding: 0.8em 2em 0.8em 3em;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .contactAbout .main__contact .form__contact .txta_contact textarea:focus {
   outline: none;
   border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.contactAbout .main__contact .form__about {
+  animation-delay: 400ms;
 }
 
 .contactAbout .bgBottom {
@@ -411,13 +475,19 @@ header .active .nav-link::after {
   left: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .btn__contact {
+    max-width: 100%;
+  }
+}
+
 footer .bg__footer {
   position: relative;
   background-image: url(../img/footer_background.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 8em 0 12.6em;
+  padding: 5em 0 12.6em;
   color: #fff;
 }
 
@@ -464,5 +534,21 @@ footer .bg__footer .main__footer .newsletter .inp__footer input::placeholder {
 footer .bg__footer .main__footer .newsletter .inp__footer input:focus {
   outline: none;
   border: 1px solid #fff;
+}
+
+footer .bg__footer .main__footer .footer__inner:nth-child(1) {
+  animation-delay: 200ms;
+}
+
+footer .bg__footer .main__footer .footer__inner:nth-child(2) {
+  animation-delay: 400ms;
+}
+
+footer .bg__footer .main__footer .footer__inner:nth-child(3) {
+  animation-delay: 600ms;
+}
+
+footer .bg__footer .main__footer .footer__inner:nth-child(4) {
+  animation-delay: 800ms;
 }
 /*# sourceMappingURL=main.css.map */

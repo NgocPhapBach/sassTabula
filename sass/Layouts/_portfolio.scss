@@ -1,39 +1,75 @@
-.portfolioAbout{
+.portfolioAbout {
     position: relative;
     background: $color-gray;
-    .mainPortfolio{
+    .mainPortfolio {
         position: relative;
         z-index: 3;
         padding-top: $pd-5;
-        .card__content{
-            font-family: 'Montserrat', sans-serif;
+        .card__content {
+            font-family: "Montserrat", sans-serif;
             background: $color-white;
             border-radius: $bd-2;
-            img{
-                @include styleImg($w-1, auto);
-            }
             text-align: center;
-            .card__text{
-                padding: $pd-2 $pd-3;
-                h5{
-                    @include styleText($fs-4,$fw-3,$color-violet);
+            transition: all 0.5s;
+            overflow: hidden;
+            .card__img {
+                margin: 0 $mg-6;
+                overflow: hidden;
+                img {
+                    @include styleImg($w-1, auto);
+                    transition: transform 650ms ease-in-out, filter 650ms ease-in-out;
+                    &:hover {
+                        transform: scale3d(1.05, 1.05, 1.05);
+                    }
                 }
-                h3{
-                    @include styleText($fs-5,$fw-4,$color-dark-2);
+            }
+            .card__text {
+                padding: $pd-2 $pd-3;
+                h5 {
+                    @include styleText($fs-4, $fw-3, $color-violet);
+                }
+                h3 {
+                    @include styleText($fs-5, $fw-4, $color-dark-2);
                     margin: $mg-3 0;
                 }
-                p{
-                    @include styleText($fs-2,$fw-2,$color-dark-2);
+                p {
+                    @include styleText($fs-2, $fw-2, $color-dark-2);
                     line-height: $lh-1;
                 }
             }
+            &:hover {
+                box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2%);
+            }
         }
+        .portfolio__inner{
+            &:nth-child(1), &:nth-child(5){
+                .card__content{
+                    animation-delay: 200ms;
+                }
+            }
+            &:nth-child(2), &:nth-child(6){
+                .card__content{
+                    animation-delay: 400ms;
+                }
+            }
+            &:nth-child(3), &:nth-child(7){
+                .card__content{
+                    animation-delay: 600ms;
+                }
+            }
+            &:nth-child(4), &:nth-child(8){
+                .card__content{
+                    animation-delay: 800ms;
+                }
+            }
+        }
+        
     }
-    .bgBottom{
+    .bgBottom {
         position: absolute;
         bottom: 0;
         left: 0;
-        img{
+        img {
             @include styleImg($w-1, auto);
         }
     }

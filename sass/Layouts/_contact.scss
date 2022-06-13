@@ -30,11 +30,10 @@
                 input,
                 select {
                     display: block;
-                    width: $w-1;
                     border: 1px solid rgba(0, 0, 0, 0.1);
                     border-radius: $bd-3;
                     padding: $pd-1 $pd-5 $pd-1 $pd-8;
-                    transition: all .5s;
+                    transition: all 0.5s;
                     &:focus {
                         outline: none;
                         border: 1px solid rgba(0, 0, 0, 0.4);
@@ -42,6 +41,9 @@
                 }
             }
             .inp__contact {
+                input {
+                    max-width: $w-1;
+                }
                 i {
                     top: 14px;
                     left: 20px;
@@ -54,6 +56,7 @@
                     left: 18px;
                 }
                 select {
+                    width: $w-1;
                     cursor: pointer;
                     -webkit-appearance: none;
                     -moz-appearance: none;
@@ -84,18 +87,26 @@
                     border: 1px solid rgba(0, 0, 0, 0.1);
                     border-radius: $bd-3;
                     padding: $pd-1 $pd-5 $pd-1 $pd-8;
-                    transition: all .5s;
-                    &:focus{
+                    transition: all 0.5s;
+                    &:focus {
                         outline: none;
                         border: 1px solid rgba(0, 0, 0, 0.4);
                     }
                 }
             }
         }
+        .form__about {
+            animation-delay: 400ms;
+        }
     }
     .bgBottom {
         position: absolute;
         bottom: 0;
         left: 0;
+    }
+}
+@include responsive("medium") {
+    .btn__contact {
+        max-width: 100%;
     }
 }

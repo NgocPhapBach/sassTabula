@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Team - Wavy</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <title>Our Team -- Wavy</title>
 
+    <!-- animate -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <!-- font gg -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,8 +43,10 @@
   </head>
   <body>
     <header>
-      <nav class="container navbar navbar-expand-lg">
-        <img class="logoTabula" src="./img/crest.png" alt="logo tabula" />
+      <nav class="container-xl navbar navbar-expand-lg">
+        <a href="#" class="btn__logo">
+          <img class="logoTabula" src="./img/crest.png" alt="logo tabula" />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -48,7 +56,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <i class="fa fa-bars"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -95,11 +103,13 @@
       </div>
       <div class="container mainCarousel">
         <div class="row align-items-center">
-          <div class="col-6">
+          <div
+            class="right__carousel col-12 col-sm-12 col-lg-6 animate__animated animate__fadeInLeft wow"
+          >
             <h5>ABOUT US</h5>
             <h1>The language teaching experts</h1>
           </div>
-          <div class="col-6">
+          <div class="left__carousel col-12 col-sm-12 col-lg-6 animate__animated animate__fadeIn">
             <img src="./img/hero_team.png" alt="hero team" />
           </div>
         </div>
@@ -112,9 +122,11 @@
       <div class="container">
         <div class="mainPortfolio">
           <div class="row">
-            <div class="col-3">
-              <div class="card__content">
-                <img src="./img/teacher_1.jpg" alt="img July" />
+            <div class="col-12 col-sm-6 col-lg-3 mt-5 portfolio__inner">
+              <div class="card__content animate__animated animate__fadeIn">
+                <div class="card__img">
+                  <img src="./img/teacher_1.jpg" alt="img July" />
+                </div>
                 <div class="card__text">
                   <h5>ITALIAN</h5>
                   <h3>July Roberts</h3>
@@ -124,9 +136,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
-              <div class="card__content">
-                <img src="./img/teacher_2.jpg" alt="img July" />
+            <div class="col-12 col-sm-6 col-lg-3 mt-5 portfolio__inner">
+              <div class="card__content animate__animated animate__fadeIn">
+                <div class="card__img">
+                  <img src="./img/teacher_2.jpg" alt="img July" />
+                </div>
                 <div class="card__text">
                   <h5>FRENCH</h5>
                   <h3>Jon Stone</h3>
@@ -134,9 +148,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
-              <div class="card__content">
-                <img src="./img/teacher_3.jpg" alt="img July" />
+            <div class="col-12 col-sm-6 col-lg-3 mt-5 portfolio__inner">
+              <div class="card__content animate__animated animate__fadeIn">
+                <div class="card__img">
+                  <img src="./img/teacher_3.jpg" alt="img July" />
+                </div>
                 <div class="card__text">
                   <h5>JAPANESE</h5>
                   <h3>Emma Stone</h3>
@@ -146,9 +162,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
-              <div class="card__content">
-                <img src="./img/teacher_4.jpg" alt="img July" />
+            <div class="col-12 col-sm-6 col-lg-3 mt-5 portfolio__inner">
+              <div class="card__content animate__animated animate__fadeIn">
+                <div class="card__img">
+                  <img src="./img/teacher_4.jpg" alt="img July" />
+                </div>
                 <div class="card__text">
                   <h5>CHINESE</h5>
                   <h3>Mark Lee</h3>
@@ -159,9 +177,11 @@
               </div>
             </div>
             <!-- row 2 -->
-            <div class="col-3 mt-5">
-              <div class="card__content">
-                <img src="./img/teacher_5.jpg" alt="img July" />
+            <div class="col-12 col-sm-6 col-lg-3 mt-5 portfolio__inner">
+              <div class="card__content animate__animated animate__fadeIn wow">
+                <div class="card__img">
+                  <img src="./img/teacher_5.jpg" alt="img July" />
+                </div>
                 <div class="card__text">
                   <h5>RUSSIAN</h5>
                   <h3>John Doe</h3>
@@ -169,9 +189,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-3 mt-5">
-              <div class="card__content">
-                <img src="./img/teacher_6.jpg" alt="img July" />
+            <div class="col-12 col-sm-6 col-lg-3 mt-5 portfolio__inner">
+              <div class="card__content animate__animated animate__fadeIn wow">
+                <div class="card__img">
+                  <img src="./img/teacher_6.jpg" alt="img July" />
+                </div>
                 <div class="card__text">
                   <h5>SWEDEN</h5>
                   <h3>Jane Smith</h3>
@@ -179,9 +201,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-3 mt-5">
-              <div class="card__content">
-                <img src="./img/teacher_7.jpg" alt="img July" />
+            <div class="col-12 col-sm-6 col-lg-3 mt-5 portfolio__inner">
+              <div class="card__content animate__animated animate__fadeIn wow">
+                <div class="card__img">
+                  <img src="./img/teacher_7.jpg" alt="img July" />
+                </div>
                 <div class="card__text">
                   <h5>SPANISH</h5>
                   <h3>Hanna Alverez</h3>
@@ -189,9 +213,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-3 mt-5">
-              <div class="card__content">
-                <img src="./img/teacher_8.jpg" alt="img July" />
+            <div class="col-12 col-sm-6 col-lg-3 mt-5 portfolio__inner">
+              <div class="card__content animate__animated animate__fadeIn wow">
+                <div class="card__img">
+                  <img src="./img/teacher_8.jpg" alt="img July" />
+                </div>
                 <div class="card__text">
                   <h5>ITALIAN</h5>
                   <h3>July Roberts</h3>
@@ -210,10 +236,12 @@
       <div class="container">
         <div class="main__contact">
           <div class="row p-5">
-            <div class="col-7">
+            <div class="col-12 col-sm-12 col-lg-7 animate__animated animate__fadeInLeft wow">
               <img class="imgContact" src="./img/conatct_inner.png" alt="" />
             </div>
-            <div class="col-5 px-3 py-5">
+            <div
+              class="col-12 col-sm-12 col-lg-5 px-3 py-5 animate__animated animate__fadeIn wow form__about"
+            >
               <div class="form__contact">
                 <form action="#">
                   <h2>Find Your Course</h2>
@@ -221,17 +249,13 @@
                     <div class="col-6">
                       <span class="inp__contact">
                         <i class="fa fa-user"></i>
-                        <input type="text" placeholder="Name"/>
+                        <input type="text" placeholder="Name" />
                       </span>
                     </div>
                     <div class="col-6">
                       <span class="inp__contact">
                         <i class="fa fa-envelope"></i>
-                        <input
-                          type="email"
-                          placeholder="E-mail"
-                          size="10"
-                        />
+                        <input type="email" placeholder="E-mail" size="10" />
                       </span>
                     </div>
                   </div>
@@ -273,7 +297,9 @@
         <div class="container">
           <div class="main__footer">
             <div class="row">
-              <div class="col-3">
+              <div
+                class="col-12 col-sm-6 col-lg-3 mt-5 animate__animated animate__fadeIn wow footer__inner"
+              >
                 <div class="contac_us">
                   <h5>Contact us</h5>
                   <div class="location__footer">
@@ -290,13 +316,19 @@
                   </div>
                   <div class="social__footer">
                     <a class="px-1" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="px-1" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="px-1" href="#"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
                     <a class="px-1" href="#"><i class="fab fa-youtube"></i></a>
-                    <a class="px-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="px-1" href="#"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
                   </div>
                 </div>
               </div>
-              <div class="col-3">
+              <div
+                class="col-12 col-sm-6 col-lg-3 mt-5 animate__animated animate__fadeIn wow footer__inner"
+              >
                 <div class="menu_footer">
                   <h5>Quick Links</h5>
                   <span>
@@ -309,7 +341,9 @@
                   </span>
                 </div>
               </div>
-              <div class="col-3">
+              <div
+                class="col-12 col-sm-6 col-lg-3 mt-5 animate__animated animate__fadeIn wow footer__inner"
+              >
                 <div class="menu_footer">
                   <h5>About</h5>
                   <span>
@@ -322,7 +356,9 @@
                   </span>
                 </div>
               </div>
-              <div class="col-3">
+              <div
+                class="col-12 col-sm-6 col-lg-3 mt-5 animate__animated animate__fadeIn wow footer__inner"
+              >
                 <div class="newsletter">
                   <h5>Newsletter</h5>
                   <span class="inp__footer">
@@ -349,5 +385,17 @@
       integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
       crossorigin="anonymous"
     ></script>
+    <!-- jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- wow -->
+    <script src="./js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>

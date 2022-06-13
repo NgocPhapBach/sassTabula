@@ -1,5 +1,5 @@
 header{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -47,5 +47,27 @@ header{
             };
         }
     }
-    
+}
+@include responsive("large"){
+    header{
+        .navbar-toggler{
+            position: absolute;
+            top: 20px;
+            left: 0;
+            font-size: $fs-5;
+            color: $color-dark-1;
+        }
+        .navbar-collapse{
+            background-color: $color-white;
+        }
+        .btn__logo{
+            margin-left: $mg-2;
+        }
+        .nav-link{
+            &::after{
+                width: 0;
+                height: 0;
+            }
+        }
+    }
 }

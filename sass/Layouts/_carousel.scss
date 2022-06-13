@@ -1,30 +1,33 @@
-.carouselAbout{
+.carouselAbout {
     position: relative;
-    .bgTop{
+    .bgTop {
         position: absolute;
         top: 0;
         left: 0;
-        img{
+        img {
             @include styleImg($w-1, auto);
         }
     }
-    .mainCarousel{
+    .mainCarousel {
         padding: $pd-4 0;
-        h5{
-            @include styleText($fs-2,$fw-3,$color-violet);
+        h5 {
+            @include styleText($fs-2, $fw-3, $color-violet);
         }
-        h1{
-            @include styleText($fs-3,$fw-4,$color-dark-1);
+        h1 {
+            @include styleText($fs-3, $fw-4, $color-dark-1);
         }
-        img{
+        img {
             @include styleImg($w-1, auto);
         }
+        .left__carousel {
+            animation-delay: .5s;
+        }
     }
-    .bgBottom{
+    .bgBottom {
         position: absolute;
         bottom: 0;
         left: 0;
-        img{
+        img {
             @include styleImg($w-1, auto);
         }
     }

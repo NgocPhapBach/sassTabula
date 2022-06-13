@@ -20,6 +20,17 @@
     color: $color;
 }
 @mixin styleImg($w,$h) {
-    width: $w;
+    max-width: $w;
     height: $h;
+}
+@mixin responsive($screen) {
+    @if(map-has-key($map: $breakpoints, $key: $screen)){
+        $value: map-get($map: $breakpoints, $key: $screen);
+        @media screen and (max-width: $value){
+            @content;
+        }
+    }   
+    @else{
+        @error "screen doesn't exits"
+    }
 }
